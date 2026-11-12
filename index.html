@@ -82,6 +82,13 @@ cite{font-style:normal;font-weight:500}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:6px 24px;text-align:center;text-wrap:balance;border:0;border-radius:999px;font:500 16px/1.1 var(--sans);letter-spacing:-.01em;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .12s ease-out,box-shadow .25s var(--ease),background-color .25s var(--ease)}
 .btn:active{transform:scale(.97)}
 .btn .i{width:19px;height:19px}
+/* WhatsApp actions carry the WhatsApp mark from the client's logo file, coloured in the site's palette: a sunrise bubble with a night handset,
+   and on the sunrise button the reverse (a night bubble, the handset in sunrise, like a cut-out). Two alpha masks: the bubble and the handset.
+   The bubble is drawn larger than the handset's own proportion (28px, 38px in the booking strip) while the handset keeps its 24px / 32px size (--wa-k) */
+:root{--wa-bubble:url(data:image/webp;base64,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);--wa-glyph:url(data:image/webp;base64,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)}
+.wa-ic{--wa-k:.857;position:relative;display:block;flex:none;width:28px;height:28px;background:var(--wa-fill,var(--sun-grad));-webkit-mask:var(--wa-bubble) center/contain no-repeat;mask:var(--wa-bubble) center/contain no-repeat;forced-color-adjust:none}
+.wa-ic::after{content:"";position:absolute;inset:0;transform:scale(var(--wa-k));background:var(--wa-ink,var(--night));-webkit-mask:var(--wa-glyph) center/contain no-repeat;mask:var(--wa-glyph) center/contain no-repeat}
+.btn-sun .wa-ic{--wa-fill:var(--night);--wa-ink:var(--sun-grad)}
 .btn-night{background:var(--night);color:var(--cream);box-shadow:0 12px 24px -16px rgba(43,26,15,.9)}
 .btn-sun{background:var(--sun-grad);color:var(--night);box-shadow:0 14px 28px -16px rgba(232,97,26,.85)}
 .btn-light{background:var(--white);color:var(--night);box-shadow:inset 0 0 0 1px var(--line-2)}
@@ -386,7 +393,9 @@ html:not(.js) .hero-video .play{display:none}
 .way .link{margin-top:auto;padding-top:8px}
 
 /* 06 about */
-.portrait{border-radius:30px;aspect-ratio:4/4.6}
+/* Vinit's portrait (supplied 13 Nov 2026): his own photo by the sea, uncropped at 3:4, so the whole seated pose shows */
+.portrait{margin:0;border-radius:30px;aspect-ratio:3/4;overflow:hidden;background:var(--beige)}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:60% 40%}
 .about{padding-top:96px;padding-bottom:48px}
 .about h2{margin-top:40px}
 .bio{margin-top:20px;color:var(--ink-2)}
@@ -636,7 +645,7 @@ html:not(.js) .sv-btn{display:none}
 .dock-row{display:flex;align-items:center;gap:10px;width:100%;max-width:440px}
 .dock .btn{flex:1;min-height:54px;padding:0 18px}
 .dock-chat{display:grid;place-items:center;width:54px;height:54px;flex:none;border-radius:50%;background:var(--white);color:var(--night);box-shadow:inset 0 0 0 1px var(--line-2),0 10px 22px -16px rgba(43,26,15,.5);transition:background-color .2s var(--ease)}
-.dock-chat .i{width:23px;height:23px}
+.dock-chat .wa-ic{--wa-k:.842;width:38px;height:38px}
 .dock-chat:active{transform:scale(.94)}
 .dock-chat{-webkit-tap-highlight-color:transparent}
 
@@ -821,7 +830,6 @@ html:not(.js) .shelf[aria-hidden]{display:none}
   <symbol id="trophy-sun" viewBox="0 0 64 34"><path d="M23 32a9 9 0 0 1 18 0Z" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M45.0 32.0L53.0 32.0M44.4 28.0L49.1 26.4M42.5 24.4L49.0 19.7M39.6 21.5L42.6 17.4M36.0 19.6L38.5 12.0M32.0 19.0L32.0 14.0M28.0 19.6L25.5 12.0M24.4 21.5L21.4 17.4M21.5 24.4L15.0 19.7M19.6 28.0L14.9 26.4M19.0 32.0L11.0 32.0"/></symbol>
   <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
   <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6"/></symbol>
-  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.2 11.6a8.2 8.2 0 0 1-12 7.3l-4.4 1.3 1.3-4.2a8.2 8.2 0 1 1 15.1-4.4Z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.6v12.8a.8.8 0 0 0 1.2.7l10.3-6.4a.8.8 0 0 0 0-1.4L9.2 4.9A.8.8 0 0 0 8 5.6Z"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.6l4.4 4.4L19 7.4"/></symbol>
@@ -887,7 +895,7 @@ html:not(.js) .shelf[aria-hidden]{display:none}
   </nav>
   <div class="menu-ctas">
     <a class="btn btn-night" href="#book">Book my free trial class</a>
-    <a class="btn btn-light" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="chat"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Chat on WhatsApp</a>
+    <a class="btn btn-light" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="chat"><span class="wa-ic" aria-hidden="true"></span>Chat on WhatsApp</a>
   </div>
 </div>
 
@@ -902,7 +910,7 @@ html:not(.js) .shelf[aria-hidden]{display:none}
     <p class="hero-sub">24-hour sessions, from early morning to late night, for IT and corporate professionals and homemakers. Join from anywhere in India or worldwide.</p>
     <div class="hero-ctas" id="hero-ctas">
       <a class="btn btn-night" href="#book">Book my free trial class</a>
-      <a class="btn btn-light" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="chat"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Chat on WhatsApp</a>
+      <a class="btn btn-light" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="chat"><span class="wa-ic" aria-hidden="true"></span>Chat on WhatsApp</a>
     </div>
     <p class="proof-line"><span><b class="num">2,500+</b> students guided so far</span><span class="dot" aria-hidden="true"></span><span>Classes by Vinit K. Bansal</span></p>
     <div class="hero-emblem" aria-hidden="true">
@@ -1003,7 +1011,7 @@ html:not(.js) .shelf[aria-hidden]{display:none}
 <!-- 03 about Vinit: who teaches, straight after his record -->
 <section class="sec about" id="about" aria-labelledby="about-title">
   <div class="wrap about-grid">
-    <div class="portrait ph shade-dusk" role="img" aria-label="Placeholder for a portrait of Vinit"><span class="ph-label">Vinit's portrait · coming soon</span></div>
+    <figure class="portrait"><img src="assets/about/vinit-960.webp" srcset="assets/about/vinit-640.webp 640w, assets/about/vinit-960.webp 960w" sizes="(min-width:760px) min(446px, 40vw), calc(100vw - 48px)" width="960" height="1280" alt="Vinit K. Bansal smiling, sitting on a rock by the sea" loading="lazy" decoding="async"></figure>
     <div class="about-text">
       <h2 id="about-title">Banker by profession, author by choice, yoga teacher by passion.</h2>
       <div class="about-body" id="about-body">
@@ -1216,7 +1224,7 @@ html:not(.js) .shelf[aria-hidden]{display:none}
         <h3 id="diet-title">Yoga and diet, together</h3>
         <p>Vinit is also a dietitian, so you can get diet guidance alongside your classes. [What's included: to be confirmed]</p>
       </div>
-      <a class="btn btn-night" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="diet"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Ask about diet guidance</a>
+      <a class="btn btn-night" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="diet"><span class="wa-ic" aria-hidden="true"></span>Ask about diet guidance</a>
     </div>
   </div>
 </section>
@@ -1440,7 +1448,7 @@ html:not(.js) .shelf[aria-hidden]{display:none}
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>A fixed slot that suits you</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Progress check-ins</li>
         </ul>
-        <a class="btn btn-light" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="coach"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Ask on WhatsApp</a>
+        <a class="btn btn-light" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="coach"><span class="wa-ic" aria-hidden="true"></span>Ask on WhatsApp</a>
       </article>
     </div>
     <div class="dots" data-for="plan-slider" aria-hidden="true"></div>
@@ -1544,7 +1552,7 @@ html:not(.js) .shelf[aria-hidden]{display:none}
         </div>
         <p class="preview-bubble" id="preview">Hi Vinit! I'd like to book a free trial class.</p>
       </div>
-      <button class="btn btn-sun" type="submit"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Get my free class link</button>
+      <button class="btn btn-sun" type="submit"><span class="wa-ic" aria-hidden="true"></span>Get my free class link</button>
       <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       <p class="form-note">Opens WhatsApp with this message. You press send, and Vinit replies with your class link.</p>
     </form>
@@ -1605,7 +1613,7 @@ html:not(.js) .shelf[aria-hidden]{display:none}
   <div class="dock-in">
     <div class="dock-row">
       <a class="btn btn-night" href="#book">Book my free trial class</a>
-      <a class="dock-chat" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="chat" aria-label="Chat with Vinit on WhatsApp"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></a>
+      <a class="dock-chat" href="https://wa.me/919815207270" target="_blank" rel="noopener" data-wa="chat" aria-label="Chat with Vinit on WhatsApp"><span class="wa-ic" aria-hidden="true"></span></a>
     </div>
   </div>
 </aside>
