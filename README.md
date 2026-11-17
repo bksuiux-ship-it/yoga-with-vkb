@@ -36,7 +36,7 @@ output directory: the repository root. Every push to `main` deploys again.
 - `assets/video/`: the hero film: the silent preview loop (`hero-loop.webm`, `hero-loop.mp4`, under 1.3MB, on computers and tablets; `hero-loop-sm.webm`, `hero-loop-sm.mp4`, 720px at 24fps and about half the size, on phones), the full film with sound (`hero.webm`, `hero.mp4`) and the poster (`hero-poster.webp`).
 - `assets/books/`, `assets/gallery/`: the large, uncropped covers and photos that open when a visitor clicks one (loaded only then); `assets/thumbs/` holds the small covers and gallery prints shown on the page.
 - `assets/about/`: Vinit's portrait for the About section (`vinit-640.webp`, `vinit-960.webp`; the browser picks one by screen width).
-- `assets/reels/`: the program reels (`video1.*` Desk Detox, `video2.*` Stress & Sleep, `video3.*` Morning Energy Flow). The Inside a class reel uses `assets/stories/class-steps.*`.
+- `assets/reels/`: the program reels (`desk-detox.*` Desk Detox, `video2.*` Stress & Sleep, `morning-energy-flow.*` Morning Energy Flow). The Inside a class reel uses `assets/stories/class-steps.*`.
 - `assets/stories/`: the story clips (`*.webm` AV1 first, `*.mp4` H.264 for Safari; loaded only when a visitor presses play), their posters (`*.webp`), the student photos (`*-card.webp` in the cards, the larger `*.webp` in the viewer) and `mandeep-face.webp` beside the booking form.
 
 The logo is built into `index.html`; the icons are the files at the root. The client's original logo file is kept with the design files, outside this repository.
