@@ -14,13 +14,12 @@ output directory: the repository root. Every push to `main` deploys again.
 
 ## Before going public
 
-- **WhatsApp number:** set to Vinit's number (`var WHATSAPP_NUMBER = '919815207270';` in `index.html`).
+- **WhatsApp number:** set to Vinit's number (`919815207270`, in the script at the end of `index.html`).
   The WhatsApp links also carry `https://wa.me/919815207270` in their markup so they work without JavaScript;
   if the number ever changes, replace it in both places (search for `919815207270`).
 - **Real media so far:** the hero film (`assets/video/`: a 14-second silent preview that plays on its own, the full 51-second film with sound that loads only when a visitor turns the sound on, and a poster), the seven book covers, Vinit's portrait, the student stories (`assets/stories/`: three student videos, two class clips, five student photos and the small photo beside the booking form), all four program reels, and Vinit's gallery photos (`assets/gallery/`, `assets/thumbs/gallery/`).
 - **Captions:** the spoken student videos still need captions. When the transcripts are ready, add a `<track kind="captions" srclang="…" label="…" src="assets/stories/NAME.vtt" default>` inside each story `<video>` in `index.html`.
-- **Placeholders:** class durations, the diet details, refund terms and the team size are still marked `[...]` until Vinit confirms them.
-- **Booking emails:** every booking is also emailed to vinitk.bansal@yogawithvkb.com through FormSubmit (`var BOOKING_EMAIL` in `index.html`). After the site is live, send one test booking: FormSubmit emails that address an activation link, and bookings arrive only after it is clicked.
+- **Booking emails:** every booking is also emailed to vinitk.bansal@yogawithvkb.com through FormSubmit (the `formsubmit.co` address in the script at the end of `index.html`). After the site is live, send one test booking: FormSubmit emails that address an activation link, and bookings arrive only after it is clicked.
 - **Search engines:** the site is open to search engines. `robots.txt` allows everything and points to `sitemap.xml`; update the sitemap's `<lastmod>` date after big changes. To hide the site again, add an `X-Robots-Tag: noindex` header in `vercel.json`.
 - **Link preview:** when the link is shared (WhatsApp, Instagram, Facebook, X), apps show `assets/og-image.jpg` (1200x630) with the title and description from the `og:` and `twitter:` tags in `index.html`. Apps cache previews: WhatsApp keeps the preview it first saw for a link, so a link shared before the preview existed can stay bare for a while. To see the current preview at once, share the link with `?v=2` on the end (any new number works), or check it at opengraph.xyz.
 
